@@ -1,0 +1,20 @@
+version: "2.3"
+
+networks:
+  haven:
+    external:
+      name: haven
+
+services:
+  docs:
+    image: littlstar/docker-docsify
+    container_name: docs
+    volumes:
+      - ./docs:/usr/local/docsify
+    networks:
+      - haven
+    labels:
+      - traefik.enable=true
+      - traefik.frontend.rule=Host:docs.monitor.1zm.in
+      - traefik.port=3000
+      - traefik.docker.network=haven
