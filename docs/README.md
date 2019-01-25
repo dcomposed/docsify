@@ -2,7 +2,7 @@
 
 #### **Traditionally**
 
-- Hello World :earth_asia:
+- Hello World! :earth_asia:
 
 #### **Informally**
 
